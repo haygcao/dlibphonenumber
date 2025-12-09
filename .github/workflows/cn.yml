@@ -1,0 +1,169 @@
+name: 自动优化并合并固话 (运行在 dlib)
+
+on:
+  push:
+    branches:
+      - main  # 只要自动同步更新了代码，这里就会触发
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  optimize-and-merge:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout current repo
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies
+        run: pip install requests pandas pypinyin
+
+      # =========================================================
+      # 核心脚本：下载SQL + 远程拉取固话 + 优化 + 合并 + 写入
+      # =========================================================
+      - name: Process Data
+        run: |
+          cat > run_process.py << 'EOF'
+          import requests
+          import pandas as pd
+          import os
+          import re
+          from collections import defaultdict
+          from pypinyin import lazy_pinyin, Style
+
+          # === 配置部分 ===
+          # 1. 手机号 SQL 源
+          SQL_URL = "https://github.com/dannyhu926/phone_location/raw/refs/heads/master/mysql/phone_location.sql"
+          
+          # 2. 固话数据源 (直接从你的 vccard 仓库 raw 地址读取，不需要检出那个仓库)
+          FIXED_ZH_URL = "https://raw.githubusercontent.com/haygcao/vccard/dartnumber/lib/merged/fixed_line_zh.dart"
+          FIXED_EN_URL = "https://raw.githubusercontent.com/haygcao/vccard/dartnumber/lib/merged/fixed_line_en.dart"
+
+          # 3. 输出路径 (当前 dlib 仓库的路径)
+          OUTPUT_ZH = "lib/generated/metadata/geocoding/86_zh.dart"
+          OUTPUT_EN = "lib/generated/metadata/geocoding/86_en.dart"
+
+          # === 辅助函数 ===
+          def convert_to_pinyin(province, city):
+              p = ''.join(lazy_pinyin(province, style=Style.NORMAL))
+              c = ''.join(lazy_pinyin(city, style=Style.NORMAL))
+              return f"{c.title()}, {p.title()}"
+
+          def fetch_remote_content(url):
+              """下载远程 Dart 文件内容并提取 Map"""
+              print(f"Fetching {url}...")
+              try:
+                  resp = requests.get(url)
+                  resp.raise_for_status()
+                  content = resp.text
+                  # 提取 return { ... }; 中间的内容
+                  match = re.search(r'return\s*\{([\s\S]*?)\};', content)
+                  if match:
+                      return match.group(1).strip()
+                  else:
+                      print(f"Warning: Could not parse map content from {url}")
+                      return ""
+              except Exception as e:
+                  print(f"Error fetching {url}: {e}")
+                  return ""
+
+          def main():
+              # --- 第一步：处理手机号 (SQL -> 优化) ---
+              print("1. Downloading SQL Source...")
+              response = requests.get(SQL_URL)
+              response.raise_for_status()
+              
+              print("2. Parsing SQL...")
+              insert_statements = [line for line in response.text.splitlines() if line.startswith("INSERT INTO `phone_location`")]
+              data = []
+              for statement in insert_statements:
+                  values_part = statement[statement.find("VALUES") + 6:].strip().strip(";")
+                  rows = values_part.split("),(")
+                  for row in rows:
+                      row = row.replace("(", "").replace(")", "")
+                      parts = [p.strip().strip("'") for p in row.split(",")]
+                      if len(parts) >= 4:
+                          data.append({'phone': parts[1], 'province': parts[2], 'city': parts[3]})
+              
+              df = pd.DataFrame(data)
+              df['phone'] = '86' + df['phone'].astype(str)
+              
+              print("3. Optimizing Mobile Data (10-to-1 Grouping)...")
+              result_list = []
+              location_groups = defaultdict(list)
+              
+              for _, row in df.iterrows():
+                  location_groups[f"{row['province']}|{row['city']}"].append(row)
+              
+              for key, rows in location_groups.items():
+                  prefix_map = defaultdict(list)
+                  for r in rows:
+                      prefix_map[r['phone'][:-1]].append(r)
+                  
+                  for prefix, group in prefix_map.items():
+                      if len(group) == 10:
+                          # 优化：10个连续号码合并为1个前缀
+                          first = group[0]
+                          result_list.append({'phone': int(prefix), 'province': first['province'], 'city': first['city']})
+                      else:
+                          # 保持原样
+                          for item in group:
+                              result_list.append({'phone': int(item['phone']), 'province': item['province'], 'city': item['city']})
+              
+              final_df = pd.DataFrame(result_list)
+              final_df.sort_values(by='phone', inplace=True)
+              print(f"Mobile optimization done. {len(final_df)} rules generated.")
+
+              # --- 第二步：获取固话数据 ---
+              print("4. Fetching Fixed Line Data from vccard...")
+              fixed_zh_data = fetch_remote_content(FIXED_ZH_URL)
+              fixed_en_data = fetch_remote_content(FIXED_EN_URL)
+
+              # --- 第三步：合并并写入 ---
+              print("5. Writing Final Files...")
+              os.makedirs(os.path.dirname(OUTPUT_ZH), exist_ok=True)
+              
+              # 写入中文版
+              with open(OUTPUT_ZH, 'w', encoding='utf-8') as f:
+                  f.write('// Generated by GitHub Actions (Merged Fixed + Optimized Mobile)\n')
+                  f.write('Map<int, String> get86_zh() {\n  return {\n')
+                  if fixed_zh_data: f.write(fixed_zh_data + ",\n") # 固话在前
+                  for _, row in final_df.iterrows():
+                      f.write(f'    {row["phone"]}: "{row["province"]}{row["city"]}",\n')
+                  f.write('  };\n}\n')
+
+              # 写入英文版
+              with open(OUTPUT_EN, 'w', encoding='utf-8') as f:
+                  f.write('// Generated by GitHub Actions (Merged Fixed + Optimized Mobile)\n')
+                  f.write('Map<int, String> get86_en() {\n  return {\n')
+                  if fixed_en_data: f.write(fixed_en_data + ",\n") # 固话在前
+                  for _, row in final_df.iterrows():
+                      pinyin = convert_to_pinyin(row['province'], row['city'])
+                      f.write(f'    {row["phone"]}: "{pinyin}",\n')
+                  f.write('  };\n}\n')
+                  
+              print("Done.")
+
+          if __name__ == "__main__":
+              main()
+          EOF
+          
+          python run_process.py
+
+      # 4. 提交并覆盖当前仓库
+      - name: Commit and Force Push
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore(data): Auto optimize and merge fixed line data"
+          file_pattern: "lib/generated/metadata/geocoding/86_*.dart"
+          branch: main
+          repository: .
+          push_options: '--force'  # 🔥 加了这一行，强制推送，专治各种冲突
