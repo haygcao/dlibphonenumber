@@ -81,7 +81,7 @@ class _PhoneNumberScreenState extends State<PhoneNumberScreen> {
       final String validNumberDescription = await geocoder.getDescriptionForValidNumber(phoneNumber, locale);
 
       final List<String> timezones = PhoneNumberToTimeZonesMapper.instance.getTimeZonesForNumber(phoneNumber);
-      final String carrier = PhoneNumberToCarrierMapper.instance.getNameForNumber(phoneNumber, locale);
+      final String carrier = await PhoneNumberToCarrierMapper.instance.getNameForNumber(phoneNumber, locale);
 
       setState(() {
         _result = """
