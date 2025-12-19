@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - main
+    paths-ignore:
+      - '.github/workflows/覆盖.yml'
   workflow_dispatch:
   schedule:
      - cron: '0 12 1 * *' # 每月1号中午12点自动运行
