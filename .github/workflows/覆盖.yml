@@ -5,7 +5,7 @@ on:
   workflow_run:
     # 监听名为 "Update and Merge Phone Data" 的 Workflow
     # 注意：这里必须和上一个 YML 文件的 name: 字段完全一致
-    workflows: ["Update and Merge Phone Data"]
+    workflows: ["自动优化并合并固话 (运行在 dlib)"]
     types:
       - completed
 
@@ -22,6 +22,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
+          token: ${{ secrets.GITHUB_TOKEN }}
           # 检出触发上一个 workflow 的对应分支（通常是 main）
           ref: ${{ github.event.workflow_run.head_branch || github.ref }}
 
