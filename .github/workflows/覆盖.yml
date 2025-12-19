@@ -1,6 +1,7 @@
 name: Run Migration Script
 
 on:
+  workflow_dispatch:
   workflow_run:
     # 监听名为 "Update and Merge Phone Data" 的 Workflow
     # 注意：这里必须和上一个 YML 文件的 name: 字段完全一致
@@ -14,15 +15,15 @@ permissions:
 jobs:
   migrate-data:
     runs-on: ubuntu-latest
-    # 只有当上一个 Workflow 成功(success)时才执行，失败了不执行
-    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    # 只有当上一个 Workflow 成功(success)时才执行，失败了不执行，或者手动触发
+    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
     
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
           # 检出触发上一个 workflow 的对应分支（通常是 main）
-          ref: ${{ github.event.workflow_run.head_branch }}
+          ref: ${{ github.event.workflow_run.head_branch || github.ref }}
 
       - name: Setup Dart
         uses: dart-lang/setup-dart@v1
@@ -30,7 +31,7 @@ jobs:
           sdk: stable
 
       - name: Install dependencies
-        run: flutter pub get
+        run: dart pub get
 
       - name: Restore Refactored Files
         run: |
