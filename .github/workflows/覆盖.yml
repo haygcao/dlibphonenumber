@@ -25,13 +25,14 @@ jobs:
           # 检出触发上一个 workflow 的对应分支（通常是 main）
           ref: ${{ github.event.workflow_run.head_branch || github.ref }}
 
-      - name: Setup Dart
-        uses: dart-lang/setup-dart@v1
+      - name: Setup Flutter
+        uses: subosito/flutter-action@v2
         with:
-          sdk: stable
+          channel: 'stable'
+          cache: true
 
       - name: Install dependencies
-        run: dart pub get
+        run: flutter pub get
 
       - name: Restore Refactored Files
         run: |
