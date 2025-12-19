@@ -46,10 +46,15 @@ void main() async {
         print('📂 Appending assets/geocoding/ to existing assets...');
         editor.appendToList(['flutter', 'assets'], 'assets/geocoding/');
       }
+      if (!existingAssets.contains('assets/carrier/')) {
+        print('📂 Appending assets/carrier/ to existing assets...');
+        editor.appendToList(['flutter', 'assets'], 'assets/carrier/');
+      }
     } catch (e) {
       // assets missing in flutter section
       print('📂 Adding assets section...');
-      editor.update(['flutter', 'assets'], ['assets/geocoding/']);
+      editor.update(
+          ['flutter', 'assets'], ['assets/geocoding/', 'assets/carrier/']);
     }
   } catch (e) {
     // flutter section missing
@@ -57,7 +62,7 @@ void main() async {
     editor.update([
       'flutter'
     ], {
-      'assets': ['assets/geocoding/']
+      'assets': ['assets/geocoding/', 'assets/carrier/']
     });
   }
 

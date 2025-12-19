@@ -38,14 +38,17 @@ jobs:
       - name: Restore Refactored Files
         run: |
           cp tool/replace/lib/phone_number_offline_geocoder.dart lib/phone_number_offline_geocoder.dart
-          cp tool/replace/lib/geocoding_loader.dart lib/geocoding_loader.dart
           cp tool/replace/lib/generated/metadata/geocoding_metadata_map.dart lib/generated/metadata/geocoding_metadata_map.dart
+          cp tool/replace/lib/carrier_loader.dart lib/carrier_loader.dart
+          cp tool/replace/lib/phone_number_to_carrier_mapper.dart lib/phone_number_to_carrier_mapper.dart
+          cp tool/replace/lib/generated/metadata/carrier_metadata_map.dart lib/generated/metadata/carrier_metadata_map.dart
           # Do not overwrite pubspec.yaml safely
           # cp tool/replace/pubspec.yaml pubspec.yaml
 
       - name: Run migration script
         run: |
            dart run tool/migrate.dart
+           dart run tool/migrate_carrier.dart
            dart run tool/create_manifest.dart
            dart run tool/fix_pubspec.dart
 
