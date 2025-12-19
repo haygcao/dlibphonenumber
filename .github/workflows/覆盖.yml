@@ -37,6 +37,7 @@ jobs:
       - name: Restore Refactored Files
         run: |
           cp tool/replace/lib/phone_number_offline_geocoder.dart lib/phone_number_offline_geocoder.dart
+          cp tool/replace/lib/geocoding_loader.dart lib/geocoding_loader.dart
           cp tool/replace/lib/generated/metadata/geocoding_metadata_map.dart lib/generated/metadata/geocoding_metadata_map.dart
           # Do not overwrite pubspec.yaml safely
           # cp tool/replace/pubspec.yaml pubspec.yaml
