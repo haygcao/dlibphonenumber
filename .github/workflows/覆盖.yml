@@ -5,7 +5,7 @@ on:
   workflow_run:
     # 监听名为 "Update and Merge Phone Data" 的 Workflow
     # 注意：这里必须和上一个 YML 文件的 name: 字段完全一致
-    workflows: ["自动优化并合并固话 (运行在 dlib)"]
+    workflows: ["Update and Merge Phone Data"]
     types:
       - completed
 
