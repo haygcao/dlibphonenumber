@@ -14,6 +14,7 @@ Map<int, String> get855_en() {
     85516: "Smart",
     85517: "Cellcard",
     85518: "Seatel",
+    85531: "Metfone",
     85560: "Metfone",
     85561: "Cellcard",
     85566: "Metfone",

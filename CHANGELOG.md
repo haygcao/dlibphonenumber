@@ -1,3 +1,9 @@
+## 1.1.63
+- Updated alternate formatting data for country calling code(s): 91
+- Updated phone metadata for region code(s): CL, CZ, DE, IN, SG
+- Updated geocoding data for country calling code(s): 91 (en)
+- Updated carrier data for country calling code(s): 56 (en), 65 (en), 91 (en), 594 (en), 596 (en), 855 (en)
+
 ## 1.1.62
 - Updated phone metadata for region code(s): BI, BL, GP, MF, MY, SK, TH, TR, TW
 - Updated short number metadata for region code(s): CH
