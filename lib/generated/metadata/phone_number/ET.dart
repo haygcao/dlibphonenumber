@@ -6,7 +6,7 @@
 Map<String, Object?> getET() {
   return {
     "generalDesc": {
-      "nationalNumberPattern": "(?:11|[2-579]\\d)\\d{7}",
+      "nationalNumberPattern": "(?:11|[2-57-9]\\d)\\d{7}",
       "possibleLength": [9],
       "possibleLengthLocalOnly": [7]
     },
@@ -19,7 +19,7 @@ Map<String, Object?> getET() {
     },
     "mobile": {
       "nationalNumberPattern":
-          "700[1-9]\\d{5}|(?:7(?:0[1-9]|1[0-8]|2[1-35-79]|3\\d|77|86|99)|9\\d\\d)\\d{6}",
+          "700[1-9]\\d{5}|(?:7(?:0[1-9]|1[0-8]|2[1-35-79]|3\\d|77|86|99)|(?:8[01]|9\\d)\\d)\\d{6}",
       "exampleNumber": "911234567",
       "possibleLength": [9],
       "possibleLengthLocalOnly": [-1]
@@ -54,7 +54,7 @@ Map<String, Object?> getET() {
       {
         "pattern": "(\\d{2})(\\d{3})(\\d{4})",
         "format": "\$1 \$2 \$3",
-        "leadingDigitsPattern": ["[1-579]"],
+        "leadingDigitsPattern": ["[1-57-9]"],
         "nationalPrefixFormattingRule": "0\$1",
         "nationalPrefixOptionalWhenFormatting": false
       }
@@ -63,7 +63,7 @@ Map<String, Object?> getET() {
       {
         "pattern": "(\\d{2})(\\d{3})(\\d{4})",
         "format": "\$1 \$2 \$3",
-        "leadingDigitsPattern": ["[1-579]"],
+        "leadingDigitsPattern": ["[1-57-9]"],
         "nationalPrefixFormattingRule": "0\$1",
         "nationalPrefixOptionalWhenFormatting": false
       }

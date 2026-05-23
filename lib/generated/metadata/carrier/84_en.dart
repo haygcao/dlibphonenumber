@@ -7,6 +7,7 @@ Map<int, String> get84_en() {
   return {
     843: "Viettel",
     847: "MobiFone",
+    8416: "Viettel",
     8430: "MobiFone",
     8451: "MobiFone",
     8452: "Vietnamobile",
@@ -31,6 +32,7 @@ Map<int, String> get84_en() {
     8496: "Viettel",
     8497: "Viettel",
     8498: "Viettel",
+    84121: "MobiFone",
     84993: "G-Mobile",
     84994: "G-Mobile",
     84995: "G-Mobile",

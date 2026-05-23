@@ -6,7 +6,7 @@
 Map<String, Object?> getBO() {
   return {
     "generalDesc": {
-      "nationalNumberPattern": "8001\\d{5}|(?:[2-467]\\d|50)\\d{6}",
+      "nationalNumberPattern": "(?:[2-7]\\d\\d|8001)\\d{5}",
       "possibleLength": [8, 9],
       "possibleLengthLocalOnly": [7]
     },
@@ -18,7 +18,7 @@ Map<String, Object?> getBO() {
       "possibleLengthLocalOnly": [7]
     },
     "mobile": {
-      "nationalNumberPattern": "[67]\\d{7}",
+      "nationalNumberPattern": "(?:57|[67]\\d)\\d{6}",
       "exampleNumber": "71234567",
       "possibleLength": [8],
       "possibleLengthLocalOnly": [-1]
@@ -57,14 +57,14 @@ Map<String, Object?> getBO() {
       {
         "pattern": "(\\d)(\\d{7})",
         "format": "\$1 \$2",
-        "leadingDigitsPattern": ["[235]|4[46]"],
+        "leadingDigitsPattern": ["[23]|4[46]|50"],
         "domesticCarrierCodeFormattingRule": "0\$CC \$1",
         "nationalPrefixOptionalWhenFormatting": false
       },
       {
         "pattern": "(\\d{8})",
         "format": "\$1",
-        "leadingDigitsPattern": ["[67]"],
+        "leadingDigitsPattern": ["[5-7]"],
         "domesticCarrierCodeFormattingRule": "0\$CC \$1",
         "nationalPrefixOptionalWhenFormatting": false
       },
@@ -80,14 +80,14 @@ Map<String, Object?> getBO() {
       {
         "pattern": "(\\d)(\\d{7})",
         "format": "\$1 \$2",
-        "leadingDigitsPattern": ["[235]|4[46]"],
+        "leadingDigitsPattern": ["[23]|4[46]|50"],
         "domesticCarrierCodeFormattingRule": "0\$CC \$1",
         "nationalPrefixOptionalWhenFormatting": false
       },
       {
         "pattern": "(\\d{8})",
         "format": "\$1",
-        "leadingDigitsPattern": ["[67]"],
+        "leadingDigitsPattern": ["[5-7]"],
         "domesticCarrierCodeFormattingRule": "0\$CC \$1",
         "nationalPrefixOptionalWhenFormatting": false
       },

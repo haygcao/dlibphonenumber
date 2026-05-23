@@ -5,6 +5,7 @@
 /// Carrier JSON data for 591_en
 Map<int, String> get591_en() {
   return {
+    59157: "Entel",
     59160: "Nuevatel",
     59161: "Nuevatel",
     59162: "Tigo",

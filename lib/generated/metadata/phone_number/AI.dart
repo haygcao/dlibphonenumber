@@ -18,7 +18,7 @@ Map<String, Object?> getAI() {
     },
     "mobile": {
       "nationalNumberPattern":
-          "264(?:235|4(?:69|76)|5(?:3[6-9]|8[1-4])|7(?:29|72))\\d{4}",
+          "264(?:235|4(?:69|7[67])|5(?:3[6-9]|8[1-4])|7(?:29|72))\\d{4}",
       "exampleNumber": "2642351234",
       "possibleLength": [10],
       "possibleLengthLocalOnly": [7]

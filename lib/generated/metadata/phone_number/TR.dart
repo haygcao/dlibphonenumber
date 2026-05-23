@@ -11,14 +11,14 @@ Map<String, Object?> getTR() {
     },
     "fixedLine": {
       "nationalNumberPattern":
-          "(?:2(?:[13][26]|[28][2468]|[45][268]|[67][246])|3(?:[13][28]|[24-6][2468]|[78][02468]|92)|4(?:[16][246]|[23578][2468]|4[26]))\\d{7}",
+          "(?:2(?:1[26]|[28][2468]|[3-5][268]|[67][246])|3(?:[13][28]|[24-6][2468]|[78][02468]|92)|4(?:[16][246]|[23578][2468]|4[26]))\\d{7}",
       "exampleNumber": "2123456789",
       "possibleLength": [10],
       "possibleLengthLocalOnly": [-1]
     },
     "mobile": {
       "nationalNumberPattern":
-          "561(?:011|61\\d)\\d{4}|5(?:[03-5]\\d|1[06]|24|7[45]|9[46])\\d{7}",
+          "561(?:011|61\\d)\\d{4}|5(?:[03-5]\\d|1[06]|24|6[24]|7[245]|9[46])\\d{7}",
       "exampleNumber": "5012345678",
       "possibleLength": [10],
       "possibleLengthLocalOnly": [-1]
@@ -74,11 +74,7 @@ Map<String, Object?> getTR() {
       {
         "pattern": "(\\d{3})(\\d{3})(\\d{2})(\\d{2})",
         "format": "\$1 \$2 \$3 \$4",
-        "leadingDigitsPattern": [
-          "5(?:[0-579]|61)",
-          "5(?:[0-579]|61[06])",
-          "5(?:[0-579]|61[06]1)"
-        ],
+        "leadingDigitsPattern": ["5[0-79]"],
         "nationalPrefixFormattingRule": "0\$1",
         "nationalPrefixOptionalWhenFormatting": true
       },
@@ -108,11 +104,7 @@ Map<String, Object?> getTR() {
       {
         "pattern": "(\\d{3})(\\d{3})(\\d{2})(\\d{2})",
         "format": "\$1 \$2 \$3 \$4",
-        "leadingDigitsPattern": [
-          "5(?:[0-579]|61)",
-          "5(?:[0-579]|61[06])",
-          "5(?:[0-579]|61[06]1)"
-        ],
+        "leadingDigitsPattern": ["5[0-79]"],
         "nationalPrefixFormattingRule": "0\$1",
         "nationalPrefixOptionalWhenFormatting": true
       },

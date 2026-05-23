@@ -10,15 +10,14 @@ Map<String, Object?> getDZ() {
       "possibleLength": [8, 9]
     },
     "fixedLine": {
-      "nationalNumberPattern":
-          "9619\\d{5}|(?:1\\d|2[013-79]|3[0-8]|4[013-689])\\d{6}",
+      "nationalNumberPattern": "9619\\d{5}|(?:[1-3]\\d|4[013-689])\\d{6}",
       "exampleNumber": "12345678",
       "possibleLength": [8, 9],
       "possibleLengthLocalOnly": [-1]
     },
     "mobile": {
       "nationalNumberPattern":
-          "(?:5(?:4[0-29]|5\\d|6[0-3])|6(?:[569]\\d|7[0-6])|7[7-9]\\d)\\d{6}",
+          "5(?:4[0-29]|6[0-3])\\d{6}|(?:55|6\\d|7[7-9])\\d{7}",
       "exampleNumber": "551234567",
       "possibleLength": [9],
       "possibleLengthLocalOnly": [-1]

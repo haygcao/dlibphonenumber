@@ -33,7 +33,7 @@ Map<int, String> get354_en() {
     354641: "Öryggisfjarskipti",
     354644: "Nova",
     354646: "IMC",
-    354647: "IMC",
+    354647: "Síminn",
     354649: "Vodafone",
     354650: "IMC",
     354651: "IMC",

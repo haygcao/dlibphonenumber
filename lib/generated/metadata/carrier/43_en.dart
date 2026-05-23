@@ -22,10 +22,10 @@ Map<int, String> get43_en() {
     43672: "Three",
     43676: "T-Mobile AT",
     43686: "Three",
-    43688: "Orange AT",
+    43688: "A1 TA",
     43690: "Three",
     43696: "Three",
-    43699: "Orange AT",
+    43699: "Three",
     436485: "Three",
     436770: "T-Mobile AT",
     436771: "T-Mobile AT",
@@ -37,6 +37,10 @@ Map<int, String> get43_en() {
     4368181: "A1 TA",
     4368182: "A1 TA",
     4368183: "Three",
-    4368184: "A1 TA"
+    4368184: "A1 TA",
+    4369981: "A1 TA",
+    4369982: "A1 TA",
+    4369988: "A1 TA",
+    4369989: "A1 TA"
   };
 }

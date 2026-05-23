@@ -1,3 +1,10 @@
+## 1.1.64
+- Updated alternate formatting data for country calling code(s): 84
+- Updated phone metadata for region code(s): AI, BO, DZ, ET, GE, GM, IN, TR, UG, VN
+- Updated short number metadata for region code(s): IT
+- Updated geocoding data for country calling code(s): 213 (en)
+- Updated carrier data for country calling code(s): 34 (en), 43 (en), 84 (en), 90 (en), 220 (en), 251 (en), 256 (en), 354 (en),
+
 ## 1.1.63
 - Updated alternate formatting data for country calling code(s): 91
 - Updated phone metadata for region code(s): CL, CZ, DE, IN, SG

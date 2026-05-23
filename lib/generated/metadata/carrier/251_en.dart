@@ -4,5 +4,5 @@
 
 /// Carrier JSON data for 251_en
 Map<int, String> get251_en() {
-  return {2517: "Safaricom", 2519: "Ethio Telecom"};
+  return {2517: "Safaricom", 2518: "Ethio Telecom", 2519: "Ethio Telecom"};
 }

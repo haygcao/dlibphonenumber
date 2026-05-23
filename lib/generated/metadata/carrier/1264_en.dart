@@ -9,6 +9,7 @@ Map<int, String> get1264_en() {
     126458: "Digicel",
     126477: "Cable & Wireless",
     1264469: "Cable & Wireless",
+    1264477: "Flow",
     1264729: "Cable & Wireless"
   };
 }
