@@ -401,6 +401,7 @@ Map<int, String> get33_en() {
     3377191: "Euroinformation Telecom",
     3377192: "Euroinformation Telecom",
     3377193: "Euroinformation Telecom",
-    3377194: "Euroinformation Telecom"
+    3377194: "Euroinformation Telecom",
+    3377199: "Bouygues"
   };
 }

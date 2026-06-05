@@ -17,7 +17,7 @@ Map<String, Object?> getNO() {
       "possibleLengthLocalOnly": [-1]
     },
     "mobile": {
-      "nationalNumberPattern": "(?:4[015-8]|9\\d)\\d{6}",
+      "nationalNumberPattern": "[49]\\d{7}",
       "exampleNumber": "40612345",
       "possibleLength": [8],
       "possibleLengthLocalOnly": [-1]

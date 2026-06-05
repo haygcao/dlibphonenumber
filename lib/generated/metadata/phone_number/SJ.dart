@@ -16,7 +16,7 @@ Map<String, Object?> getSJ() {
       "possibleLengthLocalOnly": [-1]
     },
     "mobile": {
-      "nationalNumberPattern": "(?:4[015-8]|9\\d)\\d{6}",
+      "nationalNumberPattern": "[49]\\d{7}",
       "exampleNumber": "41234567",
       "possibleLength": [8],
       "possibleLengthLocalOnly": [-1]

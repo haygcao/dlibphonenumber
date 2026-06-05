@@ -1,3 +1,7 @@
+## 1.1.65
+- Updated phone metadata for region code(s): DZ, JP, NO, SJ, SO, UG
+- Updated carrier data for country calling code(s): 33 (en), 47 (en), 233 (en), 252 (en), 256 (en)
+
 ## 1.1.64
 - Updated alternate formatting data for country calling code(s): 84
 - Updated phone metadata for region code(s): AI, BO, DZ, ET, GE, GM, IN, TR, UG, VN

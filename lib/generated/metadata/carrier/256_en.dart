@@ -19,6 +19,7 @@ Map<int, String> get256_en() {
     256727: "LycaMobile",
     256728: "Talkio",
     256730: "Airtel",
+    256731: "Airtel",
     256736: "Hamilton Telecom",
     256790: "MTN",
     256791: "MTN",

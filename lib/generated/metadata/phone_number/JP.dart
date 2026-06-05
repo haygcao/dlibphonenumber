@@ -18,7 +18,7 @@ Map<String, Object?> getJP() {
       "possibleLengthLocalOnly": [-1]
     },
     "mobile": {
-      "nationalNumberPattern": "(?:601[0-4]0|[7-9]0[1-9]\\d\\d)\\d{5}",
+      "nationalNumberPattern": "[6-9]0[1-9]\\d{7}",
       "exampleNumber": "9012345678",
       "possibleLength": [10],
       "possibleLengthLocalOnly": [-1]
