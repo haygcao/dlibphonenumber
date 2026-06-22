@@ -10,7 +10,6 @@ Map<int, String> get386_en() {
     38640: "A1",
     38641: "Telekom Slovenije",
     38643: "Telekom Slovenije",
-    38649: "Telekom Slovenije",
     38651: "Telekom Slovenije",
     38664: "T-2",
     38668: "A1",

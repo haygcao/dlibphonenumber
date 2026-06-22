@@ -14,7 +14,7 @@ Map<int, String> get256_en() {
     25678: "MTN",
     256720: "Smile",
     256721: "LycaMobile",
-    256724: "Hamilton Telecom",
+    256724: "MTN",
     256726: "LycaMobile",
     256727: "LycaMobile",
     256728: "Talkio",
@@ -28,6 +28,7 @@ Map<int, String> get256_en() {
     256794: "MTN",
     256795: "Airtel",
     256798: "Africell",
-    256799: "Africell"
+    256799: "Africell",
+    2567240: "Hamilton Telecom"
   };
 }

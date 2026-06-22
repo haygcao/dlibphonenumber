@@ -18,7 +18,7 @@ Map<String, Object?> getSI() {
     },
     "mobile": {
       "nationalNumberPattern":
-          "65(?:[178]\\d|5[56]|6[01])\\d{4}|(?:[37][01]|4[0139]|51|6[489])\\d{6}",
+          "65(?:[178]\\d|5[56]|6[01])\\d{4}|(?:[37][01]|4[013]|51|6[489])\\d{6}",
       "exampleNumber": "31234567",
       "possibleLength": [8],
       "possibleLengthLocalOnly": [-1]
@@ -75,7 +75,7 @@ Map<String, Object?> getSI() {
       {
         "pattern": "(\\d{2})(\\d{3})(\\d{3})",
         "format": "\$1 \$2 \$3",
-        "leadingDigitsPattern": ["[37][01]|4[0139]|51|6"],
+        "leadingDigitsPattern": ["[37][01]|4[013]|51|6"],
         "nationalPrefixFormattingRule": "0\$1",
         "nationalPrefixOptionalWhenFormatting": false
       },
@@ -105,7 +105,7 @@ Map<String, Object?> getSI() {
       {
         "pattern": "(\\d{2})(\\d{3})(\\d{3})",
         "format": "\$1 \$2 \$3",
-        "leadingDigitsPattern": ["[37][01]|4[0139]|51|6"],
+        "leadingDigitsPattern": ["[37][01]|4[013]|51|6"],
         "nationalPrefixFormattingRule": "0\$1",
         "nationalPrefixOptionalWhenFormatting": false
       },

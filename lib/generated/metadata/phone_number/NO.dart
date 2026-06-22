@@ -11,7 +11,7 @@ Map<String, Object?> getNO() {
     },
     "fixedLine": {
       "nationalNumberPattern":
-          "(?:2[1-4]|3[1-3578]|5[1-35-7]|6[1-4679]|7[0-8])\\d{6}",
+          "(?:2[1-4]|3[1-3578]|5[1-35-7]|6[1-46-9]|7[0-8])\\d{6}",
       "exampleNumber": "21234567",
       "possibleLength": [8],
       "possibleLengthLocalOnly": [-1]

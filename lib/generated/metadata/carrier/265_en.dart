@@ -5,6 +5,7 @@
 /// Carrier JSON data for 265_en
 Map<int, String> get265_en() {
   return {
+    2652: "Zero2",
     2653: "TNM",
     2657: "Globally Advanced Integrated Networks Ltd",
     2658: "TNM",

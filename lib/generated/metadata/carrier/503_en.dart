@@ -43,7 +43,7 @@ Map<int, String> get503_en() {
     503646: "Tigo",
     503649: "SIGET",
     503690: "Tigo",
-    503692: "Tigo",
+    503692: "Movistar",
     503693: "Tigo",
     503694: "Tigo",
     503695: "Tigo",

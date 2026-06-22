@@ -9,6 +9,6 @@ Map<int, String> get235_en() {
     2356: "Airtel",
     2357: "Sotel",
     2358: "Airtel",
-    2359: "Tigo"
+    2359: "Moov"
   };
 }

@@ -10,13 +10,13 @@ Map<String, Object?> getMW() {
       "possibleLength": [7, 9]
     },
     "fixedLine": {
-      "nationalNumberPattern": "(?:1[2-9]|2[12]\\d\\d)\\d{5}",
+      "nationalNumberPattern": "1[2-9]\\d{5}",
       "exampleNumber": "1234567",
-      "possibleLength": [7, 9],
+      "possibleLength": [7],
       "possibleLengthLocalOnly": [-1]
     },
     "mobile": {
-      "nationalNumberPattern": "111\\d{6}|(?:31|77|[89][89])\\d{7}",
+      "nationalNumberPattern": "111\\d{6}|(?:2[12]|31|77|[89][89])\\d{7}",
       "exampleNumber": "991234567",
       "possibleLength": [9],
       "possibleLengthLocalOnly": [-1]
@@ -56,16 +56,9 @@ Map<String, Object?> getMW() {
         "nationalPrefixOptionalWhenFormatting": false
       },
       {
-        "pattern": "(\\d{3})(\\d{3})(\\d{3})",
-        "format": "\$1 \$2 \$3",
-        "leadingDigitsPattern": ["2"],
-        "nationalPrefixFormattingRule": "0\$1",
-        "nationalPrefixOptionalWhenFormatting": false
-      },
-      {
         "pattern": "(\\d{3})(\\d{2})(\\d{2})(\\d{2})",
         "format": "\$1 \$2 \$3 \$4",
-        "leadingDigitsPattern": ["[137-9]"],
+        "leadingDigitsPattern": ["[1-37-9]"],
         "nationalPrefixFormattingRule": "0\$1",
         "nationalPrefixOptionalWhenFormatting": false
       }
@@ -79,16 +72,9 @@ Map<String, Object?> getMW() {
         "nationalPrefixOptionalWhenFormatting": false
       },
       {
-        "pattern": "(\\d{3})(\\d{3})(\\d{3})",
-        "format": "\$1 \$2 \$3",
-        "leadingDigitsPattern": ["2"],
-        "nationalPrefixFormattingRule": "0\$1",
-        "nationalPrefixOptionalWhenFormatting": false
-      },
-      {
         "pattern": "(\\d{3})(\\d{2})(\\d{2})(\\d{2})",
         "format": "\$1 \$2 \$3 \$4",
-        "leadingDigitsPattern": ["[137-9]"],
+        "leadingDigitsPattern": ["[1-37-9]"],
         "nationalPrefixFormattingRule": "0\$1",
         "nationalPrefixOptionalWhenFormatting": false
       }

@@ -13,6 +13,7 @@ Map<int, String> get40_en() {
     4074: "Orange",
     4075: "Orange",
     4076: "Telekom",
+    4078: "Telekom",
     4079: "Vodafone",
     40702: "Lycamobile",
     40705: "Iristel",
@@ -27,13 +28,7 @@ Map<int, String> get40_en() {
     40775: "Digi Mobil",
     40776: "Digi Mobil",
     40777: "Digi Mobil",
-    40780: "Telekom",
-    40783: "Orange",
-    40784: "Telekom",
-    40785: "Telekom",
-    40786: "Telekom",
     40787: "Orange",
-    40788: "Telekom",
     407000: "Enigma-System",
     407013: "Lycamobile",
     407014: "Lycamobile",
@@ -41,6 +36,10 @@ Map<int, String> get40_en() {
     407016: "Lycamobile",
     407017: "Lycamobile",
     407018: "Lycamobile",
-    407019: "Lycamobile"
+    407019: "Lycamobile",
+    407830: "Orange",
+    407831: "Orange",
+    407832: "Orange",
+    407833: "Orange"
   };
 }
