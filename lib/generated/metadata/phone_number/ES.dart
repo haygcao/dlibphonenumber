@@ -6,12 +6,12 @@
 Map<String, Object?> getES() {
   return {
     "generalDesc": {
-      "nationalNumberPattern": "[5-9]\\d{8}",
+      "nationalNumberPattern": "(?:400|[5-9]\\d\\d)\\d{6}",
       "possibleLength": [9]
     },
     "fixedLine": {
       "nationalNumberPattern":
-          "96906(?:0[0-8]|1[1-9]|[2-9]\\d)\\d\\d|9(?:69(?:0[0-57-9]|[1-9]\\d)|73(?:[0-8]\\d|9[1-9]))\\d{4}|(?:8(?:[1356]\\d|[28][0-8]|[47][1-9])|9(?:[135]\\d|[268][0-8]|4[1-9]|7[124-9]))\\d{6}",
+          "96906(?:0[0-8]|1[1-9]|[2-9]\\d)\\d\\d|9(?:69(?:0[0-57-9]|[1-9]\\d)|73(?:[0-8]\\d|9[1-9]))\\d{4}|(?:400|8(?:[1356]\\d|[28][0-8]|[47][1-9])|9(?:[135]\\d|[268][0-8]|4[1-9]|7[124-9]))\\d{6}",
       "exampleNumber": "810123456",
       "possibleLength": [9],
       "possibleLengthLocalOnly": [-1]
@@ -77,7 +77,7 @@ Map<String, Object?> getES() {
       {
         "pattern": "(\\d{3})(\\d{2})(\\d{2})(\\d{2})",
         "format": "\$1 \$2 \$3 \$4",
-        "leadingDigitsPattern": ["[5-9]"],
+        "leadingDigitsPattern": ["[4-9]"],
         "nationalPrefixOptionalWhenFormatting": false
       }
     ],
@@ -91,7 +91,7 @@ Map<String, Object?> getES() {
       {
         "pattern": "(\\d{3})(\\d{2})(\\d{2})(\\d{2})",
         "format": "\$1 \$2 \$3 \$4",
-        "leadingDigitsPattern": ["[5-9]"],
+        "leadingDigitsPattern": ["[4-9]"],
         "nationalPrefixOptionalWhenFormatting": false
       }
     ],

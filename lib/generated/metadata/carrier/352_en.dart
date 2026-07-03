@@ -9,6 +9,7 @@ Map<int, String> get352_en() {
     35266: "Orange",
     35269: "Tango",
     352651: "POST",
+    352655: "MTX",
     352658: "POST",
     352671: "JOIN",
     352678: "JOIN"

@@ -16,7 +16,7 @@ Map<String, Object?> getMZ() {
       "possibleLengthLocalOnly": [-1]
     },
     "mobile": {
-      "nationalNumberPattern": "8[2-79]\\d{7}",
+      "nationalNumberPattern": "8(?:[2-79]\\d|80)\\d{6}",
       "exampleNumber": "821234567",
       "possibleLength": [9],
       "possibleLengthLocalOnly": [-1]
@@ -51,7 +51,7 @@ Map<String, Object?> getMZ() {
       {
         "pattern": "(\\d{2})(\\d{3})(\\d{3,4})",
         "format": "\$1 \$2 \$3",
-        "leadingDigitsPattern": ["2|8[2-79]"],
+        "leadingDigitsPattern": ["2|8[2-9]"],
         "nationalPrefixOptionalWhenFormatting": false
       },
       {
@@ -65,7 +65,7 @@ Map<String, Object?> getMZ() {
       {
         "pattern": "(\\d{2})(\\d{3})(\\d{3,4})",
         "format": "\$1 \$2 \$3",
-        "leadingDigitsPattern": ["2|8[2-79]"],
+        "leadingDigitsPattern": ["2|8[2-9]"],
         "nationalPrefixOptionalWhenFormatting": false
       },
       {

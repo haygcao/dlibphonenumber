@@ -11,6 +11,7 @@ Map<int, String> get258_en() {
     25885: "Vodacom",
     25886: "Movitel",
     25887: "Movitel",
+    25888: "Movitel",
     25889: "GMPCS"
   };
 }

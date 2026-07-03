@@ -130,6 +130,7 @@ class TimezoneMetadataMap {
       297: "America/Aruba",
       298: "Atlantic/Faeroe",
       299: "America/Godthab&America/Scoresbysund&America/Thule",
+      344: "Europe/Madrid",
       345: "Europe/Madrid",
       346: "Europe/Madrid",
       347: "Europe/Madrid",

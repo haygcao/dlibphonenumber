@@ -1,3 +1,10 @@
+## 1.1.67
+- Updated alternate formatting data for country calling code(s): 34
+- Updated phone metadata for region code(s): CM, ES, GY, HN, MZ, SR, TM, TZ, US, UZ
+- Updated geocoding data for country calling code(s): 504 (en)
+- Updated carrier data for country calling code(s): 46 (en), 255 (en), 258 (en), 352 (en), 381 (en), 592 (en), 597 (en),
+- Updated / refreshed time zone meta data.
+
 ## 1.1.66
 - Updated phone metadata for region code(s): BF, KE, MC, MW, NO, SG, SI, UG, VN
 - Updated geocoding data for country calling code(s): 47 (en)

@@ -41,7 +41,7 @@ Map<String, Object?> get34() {
       {
         "pattern": "(\\d{3})(\\d{3})(\\d{3})",
         "format": "\$1 \$2 \$3",
-        "leadingDigitsPattern": ["[5-7]|80[367]|90[1289]|[89][1-8]"],
+        "leadingDigitsPattern": ["[4-7]|80[367]|90[1289]|[89][1-8]"],
         "nationalPrefixOptionalWhenFormatting": false
       },
       {
@@ -55,7 +55,7 @@ Map<String, Object?> get34() {
       {
         "pattern": "(\\d{3})(\\d{3})(\\d{3})",
         "format": "\$1 \$2 \$3",
-        "leadingDigitsPattern": ["[5-7]|80[367]|90[1289]|[89][1-8]"],
+        "leadingDigitsPattern": ["[4-7]|80[367]|90[1289]|[89][1-8]"],
         "nationalPrefixOptionalWhenFormatting": false
       },
       {

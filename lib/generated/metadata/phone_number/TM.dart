@@ -6,7 +6,7 @@
 Map<String, Object?> getTM() {
   return {
     "generalDesc": {
-      "nationalNumberPattern": "(?:[1-6]\\d|71)\\d{6}",
+      "nationalNumberPattern": "[1-7]\\d{7}",
       "possibleLength": [8]
     },
     "fixedLine": {
@@ -17,7 +17,7 @@ Map<String, Object?> getTM() {
       "possibleLengthLocalOnly": [-1]
     },
     "mobile": {
-      "nationalNumberPattern": "(?:6\\d|71)\\d{6}",
+      "nationalNumberPattern": "(?:6\\d|7[12])\\d{6}",
       "exampleNumber": "66123456",
       "possibleLength": [8],
       "possibleLengthLocalOnly": [-1]

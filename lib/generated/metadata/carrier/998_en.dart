@@ -8,7 +8,7 @@ Map<int, String> get998_en() {
     9982: "Beeline",
     9983: "HUMANS",
     99850: "Ucell",
-    99870: "MobiUZ",
+    99870: "Uzbektelecom",
     99877: "Uzbektelecom",
     99880: "Perfectum",
     99887: "MobiUZ",
