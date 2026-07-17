@@ -9,6 +9,7 @@ Map<int, String> get263_en() {
     26372: "Net*One",
     26373: "Telecel",
     26377: "Econet",
-    26378: "Econet"
+    26378: "Econet",
+    26379: "Econet"
   };
 }

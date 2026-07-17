@@ -6,17 +6,17 @@
 Map<String, Object?> getAC() {
   return {
     "generalDesc": {
-      "nationalNumberPattern": "(?:[01589]\\d|[46])\\d{4}",
+      "nationalNumberPattern": "(?:[01589]\\d|[2-467])\\d{4}",
       "possibleLength": [5, 6]
     },
     "fixedLine": {
-      "nationalNumberPattern": "6[2-467]\\d{3}",
+      "nationalNumberPattern": "6\\d{4}",
       "exampleNumber": "62889",
       "possibleLength": [5],
       "possibleLengthLocalOnly": [-1]
     },
     "mobile": {
-      "nationalNumberPattern": "4\\d{4}",
+      "nationalNumberPattern": "[2-47]\\d{4}",
       "exampleNumber": "40123",
       "possibleLength": [5],
       "possibleLengthLocalOnly": [-1]

@@ -19,7 +19,7 @@ Map<String, Object?> getUG() {
     },
     "mobile": {
       "nationalNumberPattern":
-          "7280\\d{5}|7(?:[014-8]\\d|2[01467]|3[016]|9[0-589])\\d{6}",
+          "7280\\d{5}|7(?:[014-8]\\d|2[01467]|3[0167]|9[0-589])\\d{6}",
       "exampleNumber": "712345678",
       "possibleLength": [9],
       "possibleLengthLocalOnly": [-1]

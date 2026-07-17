@@ -20,7 +20,7 @@ Map<String, Object?> getCN() {
     },
     "mobile": {
       "nationalNumberPattern":
-          "1740[0-5]\\d{6}|1(?:[38]\\d|4[57]|[59][0-35-9]|6[25-7]|7[0-35-8])\\d{8}",
+          "1(?:610\\d|740[0-5])\\d{6}|1(?:[38]\\d|4[57]|[59][0-35-9]|6[25-7]|7[0-35-8])\\d{8}",
       "exampleNumber": "13123456789",
       "possibleLength": [11],
       "possibleLengthLocalOnly": [-1]

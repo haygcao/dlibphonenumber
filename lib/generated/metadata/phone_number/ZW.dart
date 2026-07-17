@@ -19,7 +19,7 @@ Map<String, Object?> getZW() {
       "possibleLengthLocalOnly": [3, 4]
     },
     "mobile": {
-      "nationalNumberPattern": "7(?:[1278]\\d|3[1-9])\\d{6}",
+      "nationalNumberPattern": "7(?:[1278]\\d|3[1-9]|9[01])\\d{6}",
       "exampleNumber": "712345678",
       "possibleLength": [9],
       "possibleLengthLocalOnly": [-1]

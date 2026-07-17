@@ -1,3 +1,10 @@
+## 1.1.68
+- Updated alternate formatting data for country calling code(s): 995
+- Updated phone metadata for region code(s): AC, CN, FO, GE, IR, KE, SE, UG, ZW
+- Updated short number metadata for region code(s): FR
+- Updated geocoding data for country calling code(s): 86 (en, zh)
+- Updated carrier data for country calling code(s): 61 (en), 86 (en, zh), 93 (en, fa), 247 (en), 250 (en), 254 (en), 256 (en),
+
 ## 1.1.67
 - Updated alternate formatting data for country calling code(s): 34
 - Updated phone metadata for region code(s): CM, ES, GY, HN, MZ, SR, TM, TZ, US, UZ

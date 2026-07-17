@@ -32,6 +32,7 @@ Map<int, String> get420_en() {
     420776: "Vodafone",
     420777: "Vodafone",
     420792: "O2",
+    420798: "T-Mobile",
     4207030: "T-Mobile",
     4207031: "T-Mobile",
     4207032: "T-Mobile",

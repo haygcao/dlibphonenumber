@@ -16,7 +16,7 @@ Map<String, Object?> getFO() {
       "possibleLengthLocalOnly": [-1]
     },
     "mobile": {
-      "nationalNumberPattern": "(?:[27][1-9]|5\\d|9[16])\\d{4}",
+      "nationalNumberPattern": "(?:[27][1-9]|5\\d|9[136])\\d{4}",
       "exampleNumber": "211234",
       "possibleLength": [6],
       "possibleLengthLocalOnly": [-1]

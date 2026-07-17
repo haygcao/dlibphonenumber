@@ -5,12 +5,9 @@
 /// Carrier JSON data for 247_en
 Map<int, String> get247_en() {
   return {
-    24741: "Sure South Atlantic",
-    24742: "Sure South Atlantic",
-    24743: "Sure South Atlantic",
-    24745: "Sure South Atlantic",
-    24746: "Sure South Atlantic",
-    24747: "Sure South Atlantic",
-    24748: "Sure South Atlantic"
+    2472: "Sure South Atlantic",
+    2473: "Sure South Atlantic",
+    2474: "Sure South Atlantic",
+    2477: "Sure South Atlantic"
   };
 }

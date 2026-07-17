@@ -18,7 +18,7 @@ Map<String, Object?> getSE() {
       "possibleLengthLocalOnly": [-1]
     },
     "mobile": {
-      "nationalNumberPattern": "7[02369]\\d{7}",
+      "nationalNumberPattern": "7[023689]\\d{7}",
       "exampleNumber": "701234567",
       "possibleLength": [9],
       "possibleLengthLocalOnly": [-1]

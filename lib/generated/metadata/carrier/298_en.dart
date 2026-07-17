@@ -19,6 +19,7 @@ Map<int, String> get298_en() {
     29878: "Faroese Telecom",
     29879: "Faroese Telecom",
     29891: "Faroese Telecom",
+    29893: "Faroese Telecom",
     29896: "Faroese Telecom"
   };
 }

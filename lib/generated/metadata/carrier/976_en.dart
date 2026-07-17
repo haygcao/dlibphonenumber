@@ -20,7 +20,6 @@ Map<int, String> get976_en() {
     97689: "Unitel",
     97690: "Skytel",
     97691: "Skytel",
-    97692: "Skytel",
     97693: "G-Mobile",
     97694: "Mobicom",
     97695: "Mobicom",
@@ -47,6 +46,10 @@ Map<int, String> get976_en() {
     976556: "Mobicom",
     976557: "Mobicom",
     976558: "Mobicom",
-    976559: "Mobicom"
+    976559: "Mobicom",
+    976920: "Skytel",
+    976921: "G-Mobile",
+    976923: "Skytel",
+    976929: "Skytel"
   };
 }
