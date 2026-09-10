@@ -37,6 +37,7 @@ Map<int, String> get966_en() {
     9665736: "STC",
     9665737: "STC",
     9665738: "STC",
+    9665739: "STC",
     9665790: "Lebara",
     9665791: "Lebara"
   };

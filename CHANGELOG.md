@@ -1,3 +1,9 @@
+## 1.1.72
+- Updated alternate formatting data for country calling code(s): 91
+- Updated phone metadata for region code(s): BD, HK, IN, PA, PT, TR
+- Updated geocoding data for country calling code(s): 91 (en)
+- Updated carrier data for country calling code(s): 90 (en), 359 (en), 852 (en, zh), 966 (en)
+
 ## 1.1.71
 - Updated phone metadata for region code(s): GM, HK, IN, JO, PG, SN, TZ, ZW
 - Updated geocoding data for country calling code(s): 55 (en), 61 (en), 91 (en), 220 (en), 221 (en), 263 (en)

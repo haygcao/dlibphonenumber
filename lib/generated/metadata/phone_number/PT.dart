@@ -31,7 +31,7 @@ Map<String, Object?> getPT() {
     },
     "premiumRate": {
       "nationalNumberPattern":
-          "(?:6(?:0[178]|4[68])\\d|76(?:0[1-57]|1[2-47]|2[237]))\\d{5}",
+          "(?:6(?:0[178]|4[68])\\d|76(?:0[1-57]|1[2-47]|2[1-37]))\\d{5}",
       "exampleNumber": "760123456",
       "possibleLength": [9],
       "possibleLengthLocalOnly": [-1]

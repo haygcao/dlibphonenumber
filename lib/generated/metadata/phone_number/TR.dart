@@ -18,7 +18,7 @@ Map<String, Object?> getTR() {
     },
     "mobile": {
       "nationalNumberPattern":
-          "5(?:61(?:011|61\\d)|82[2-4]\\d\\d)\\d{4}|5(?:[03-5]\\d|1[06]|24|6[24]|7[245]|9[46])\\d{7}",
+          "5(?:61(?:011|61\\d)|82[2-5]\\d\\d)\\d{4}|5(?:[03-5]\\d|1[06]|24|6[24]|7[245]|9[46])\\d{7}",
       "exampleNumber": "5012345678",
       "possibleLength": [10],
       "possibleLengthLocalOnly": [-1]
