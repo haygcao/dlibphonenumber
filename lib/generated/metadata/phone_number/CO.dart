@@ -19,7 +19,7 @@ Map<String, Object?> getCO() {
     },
     "mobile": {
       "nationalNumberPattern":
-          "333301[0-5]\\d{3}|3333(?:00|2[5-9]|[3-9]\\d)\\d{4}|(?:3(?:(?:0[0-5]|1\\d|5[01]|70)\\d|2(?:[0-3]\\d|4[1-9])|3(?:00|3[0-24-9]))|9(?:101|408))\\d{6}",
+          "333301[0-5]\\d{3}|3333(?:00|2[5-9]|[3-9]\\d)\\d{4}|(?:3(?:24[1-9]|3(?:00|3[0-24-9]))|9408)\\d{6}|3(?:0[0-5]|1\\d|2[0-3]|5[01]|70)\\d{7}",
       "exampleNumber": "3211234567",
       "possibleLength": [10],
       "possibleLengthLocalOnly": [-1]
@@ -72,7 +72,7 @@ Map<String, Object?> getCO() {
       {
         "pattern": "(\\d{3})(\\d{7})",
         "format": "\$1 \$2",
-        "leadingDigitsPattern": ["3[0-357]|9[14]"],
+        "leadingDigitsPattern": ["3[0-357]|94"],
         "domesticCarrierCodeFormattingRule": "0\$CC \$1",
         "nationalPrefixOptionalWhenFormatting": false
       },
@@ -102,7 +102,7 @@ Map<String, Object?> getCO() {
       {
         "pattern": "(\\d{3})(\\d{7})",
         "format": "\$1 \$2",
-        "leadingDigitsPattern": ["3[0-357]|9[14]"],
+        "leadingDigitsPattern": ["3[0-357]|94"],
         "domesticCarrierCodeFormattingRule": "0\$CC \$1",
         "nationalPrefixOptionalWhenFormatting": false
       },

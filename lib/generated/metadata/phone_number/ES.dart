@@ -6,7 +6,7 @@
 Map<String, Object?> getES() {
   return {
     "generalDesc": {
-      "nationalNumberPattern": "(?:400|[5-9]\\d\\d)\\d{6}",
+      "nationalNumberPattern": "400\\d{6}|(?:51|[6-9]\\d)\\d{7}",
       "possibleLength": [9]
     },
     "fixedLine": {
@@ -18,7 +18,7 @@ Map<String, Object?> getES() {
     },
     "mobile": {
       "nationalNumberPattern":
-          "96906(?:09|10)\\d\\d|(?:590(?:10[0-2]|600)|97390\\d)\\d{3}|(?:6\\d|7[1-48])\\d{7}",
+          "9(?:6906(?:09|10)|7390\\d\\d)\\d\\d|(?:6\\d|7[1-48])\\d{7}",
       "exampleNumber": "612345678",
       "possibleLength": [9],
       "possibleLengthLocalOnly": [-1]

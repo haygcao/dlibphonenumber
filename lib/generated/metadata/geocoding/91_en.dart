@@ -141,7 +141,6 @@ Map<int, String> get91_en() {
     91793: "Ahmedabad Local, Gujarat",
     91794: "Ahmedabad Local, Gujarat",
     91795: "Ahmedabad Local, Gujarat",
-    91796: "Ahmedabad Local, Gujarat",
     91802: "Bangalore, Karnataka",
     91803: "Bangalore, Karnataka",
     91804: "Bangalore, Karnataka",

@@ -33,6 +33,7 @@ Map<int, String> get91_en() {
     91785: "Reliance Jio",
     91789: "Airtel",
     91790: "Reliance Jio",
+    91796: "Vodafone",
     91798: "Reliance Jio",
     91819: "Idea",
     91825: "Reliance Jio",

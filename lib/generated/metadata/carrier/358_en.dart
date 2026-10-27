@@ -10,7 +10,6 @@ Map<int, String> get358_en() {
     35842: "Telia",
     35844: "DNA",
     35846: "Elisa",
-    35849: "Elisa",
     35850: "Elisa",
     358436: "DNA",
     358438: "DNA",

@@ -1,3 +1,11 @@
+## 1.1.75
+- Updated alternate formatting data for country calling code(s): 91
+- Updated phone metadata for region code(s): AU, AX, BW, CC, CN, CO, CR, CV, CX, DK, ES, FI, GH, GY, IN, KE, KW, PG, PY,
+- Updated short number metadata for region code(s): BW, CO
+- Updated geocoding data for country calling code(s): 86 (en, zh), 91 (en), 233 (en), 267 (en)
+- New carrier data for country calling code(s): 7 (kk)
+- Updated carrier data for country calling code(s): 7 (en, ru), 33 (en), 34 (en), 40 (en), 57 (en), 91 (en), 238 (en), 254 (en),
+
 ## 1.1.74
 - Updated phone metadata for region code(s): CN, IR, NG, US
 - Updated short number metadata for region code(s): CN

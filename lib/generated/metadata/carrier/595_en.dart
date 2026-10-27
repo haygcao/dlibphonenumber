@@ -15,6 +15,7 @@ Map<int, String> get595_en() {
     595984: "Tigo",
     595985: "Tigo",
     595986: "Tigo",
-    595987: "Tigo"
+    595987: "Tigo",
+    595988: "Tigo"
   };
 }

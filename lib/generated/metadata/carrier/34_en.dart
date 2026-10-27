@@ -82,8 +82,6 @@ Map<int, String> get34_en() {
     34697: "Vodafone",
     34698: "Yoigo",
     34699: "Movistar",
-    345901: "Movistar",
-    345906: "Vodafone",
     346016: "Orange",
     346018: "Orange",
     346019: "Orange",

@@ -17,7 +17,7 @@ Map<String, Object?> getCV() {
       "possibleLengthLocalOnly": [-1]
     },
     "mobile": {
-      "nationalNumberPattern": "(?:36|5[1-389]|9\\d)\\d{5}",
+      "nationalNumberPattern": "(?:36|5[1-37-9]|9\\d)\\d{5}",
       "exampleNumber": "9911234",
       "possibleLength": [7],
       "possibleLengthLocalOnly": [-1]

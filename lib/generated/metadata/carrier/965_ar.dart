@@ -4,5 +4,5 @@
 
 /// Carrier JSON data for 965_ar
 Map<int, String> get965_ar() {
-  return {9655: "فيفا", 9656: "أوريدو", 9659: "زين"};
+  return {9655: "فيفا", 9656: "أوريدو", 9659: "زين", 96559: "STC"};
 }

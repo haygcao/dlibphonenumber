@@ -42,7 +42,7 @@ Map<String, Object?> getPG() {
       "possibleLengthLocalOnly": [-1]
     },
     "voip": {
-      "nationalNumberPattern": "2(?:0[0-57]|7[568])\\d{4}",
+      "nationalNumberPattern": "2(?:0[0-7]|7[568])\\d{4}",
       "exampleNumber": "2751234",
       "possibleLength": [7],
       "possibleLengthLocalOnly": [-1]

@@ -10,7 +10,8 @@ Map<String, Object?> getCR() {
       "possibleLength": [8, 10]
     },
     "fixedLine": {
-      "nationalNumberPattern": "210[7-9]\\d{4}|2(?:[024-7]\\d|1[1-9])\\d{5}",
+      "nationalNumberPattern":
+          "2(?:010|1(?:0[7-9]|[1-9]\\d)|[24-7]\\d\\d)\\d{4}",
       "exampleNumber": "22123456",
       "possibleLength": [8],
       "possibleLengthLocalOnly": [-1]
@@ -43,7 +44,7 @@ Map<String, Object?> getCR() {
       "possibleLengthLocalOnly": [-1]
     },
     "voip": {
-      "nationalNumberPattern": "(?:210[0-6]|4\\d{3}|5100)\\d{4}",
+      "nationalNumberPattern": "(?:2(?:00[0-3]|10[0-6])|4\\d{3}|5100)\\d{4}",
       "exampleNumber": "40001234",
       "possibleLength": [8],
       "possibleLengthLocalOnly": [-1]

@@ -64,6 +64,7 @@ Map<int, String> get592_en() {
     592750: "Digicel Guyana",
     592770: "E-Networks",
     592780: "GTT",
+    592781: "E-Networks",
     592786: "Digicel Guyana",
     592787: "Digicel Guyana"
   };

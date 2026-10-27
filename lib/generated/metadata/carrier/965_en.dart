@@ -4,5 +4,11 @@
 
 /// Carrier JSON data for 965_en
 Map<int, String> get965_en() {
-  return {9654: "Virgin mobile", 9655: "VIVA", 9656: "Ooredoo", 9659: "Zain"};
+  return {
+    9654: "Virgin mobile",
+    9655: "VIVA",
+    9656: "Ooredoo",
+    9659: "Zain",
+    96559: "STC"
+  };
 }

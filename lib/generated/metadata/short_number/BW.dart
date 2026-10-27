@@ -6,8 +6,8 @@
 Map<String, Object?> getBW() {
   return {
     "generalDesc": {
-      "nationalNumberPattern": "[19]\\d\\d(?:\\d{2})?",
-      "possibleLength": [3, 5]
+      "nationalNumberPattern": "[19]\\d{2,4}",
+      "possibleLength": [3, 4, 5]
     },
     "fixedLine": {
       "possibleLength": [-1],
@@ -18,8 +18,8 @@ Map<String, Object?> getBW() {
       "possibleLengthLocalOnly": [-1]
     },
     "tollFree": {
-      "nationalNumberPattern": "9(?:11|9[7-9])",
-      "exampleNumber": "911",
+      "nationalNumberPattern": "11[0-246]|9(?:1[0-4]|2[02-69]|9[06-9])",
+      "exampleNumber": "110",
       "possibleLength": [3],
       "possibleLengthLocalOnly": [-1]
     },
@@ -56,8 +56,8 @@ Map<String, Object?> getBW() {
       "possibleLengthLocalOnly": [-1]
     },
     "emergency": {
-      "nationalNumberPattern": "9(?:11|9[7-9])",
-      "exampleNumber": "911",
+      "nationalNumberPattern": "11[12]|9(?:11|9[7-9])",
+      "exampleNumber": "111",
       "possibleLength": [3],
       "possibleLengthLocalOnly": [-1]
     },
@@ -66,9 +66,10 @@ Map<String, Object?> getBW() {
       "possibleLengthLocalOnly": [-1]
     },
     "shortCode": {
-      "nationalNumberPattern": "1(?:1[26]|3123)|9(?:1[14]|9[1-57-9])",
-      "exampleNumber": "112",
-      "possibleLength": [3, 5],
+      "nationalNumberPattern":
+          "1(?:(?:[02]|[6-9]\\d\\d)\\d|1[0-2469]|3123)|9(?:1[0-4]|2[02-69]|9\\d)|1[0-28]\\d\\d",
+      "exampleNumber": "100",
+      "possibleLength": [3, 4, 5],
       "possibleLengthLocalOnly": [-1]
     },
     "standardRate": {
@@ -76,9 +77,10 @@ Map<String, Object?> getBW() {
       "possibleLengthLocalOnly": [-1]
     },
     "carrierSpecific": {
-      "nationalNumberPattern": "131\\d\\d",
-      "exampleNumber": "13100",
-      "possibleLength": [5],
+      "nationalNumberPattern":
+          "1(?:[0-2]|31)\\d\\d|9(?:1[02-4]|2[02-69]|9[0-3])|1(?:[02]\\d|1[49])",
+      "exampleNumber": "100",
+      "possibleLength": [3, 4, 5],
       "possibleLengthLocalOnly": [-1]
     },
     "mobileNumberPortableRegion": false,

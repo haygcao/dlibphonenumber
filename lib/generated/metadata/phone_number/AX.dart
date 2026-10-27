@@ -17,7 +17,7 @@ Map<String, Object?> getAX() {
       "possibleLengthLocalOnly": [-1]
     },
     "mobile": {
-      "nationalNumberPattern": "4946\\d{2,6}|(?:4[0-8]|50)\\d{4,8}",
+      "nationalNumberPattern": "(?:4[0-8]|50)\\d{4,8}",
       "exampleNumber": "412345678",
       "possibleLength": [6, 7, 8, 9, 10],
       "possibleLengthLocalOnly": [-1]

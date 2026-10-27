@@ -6,19 +6,19 @@
 Map<String, Object?> getBW() {
   return {
     "generalDesc": {
-      "nationalNumberPattern":
-          "(?:0800|(?:[37]|800)\\d)\\d{6}|(?:[2-6]\\d|90)\\d{5}",
+      "nationalNumberPattern": "90\\d{5}|(?:0800|[2-6]|(?:7|800)\\d)\\d{6}",
       "possibleLength": [7, 8, 10]
     },
     "fixedLine": {
       "nationalNumberPattern":
-          "(?:2(?:4[0-48]|6[0-24]|9[0578])|3(?:1[0-35-9]|55|[69]\\d|7[013]|81)|4(?:6[03]|7[1267]|9[0-5])|5(?:3[03489]|4[0489]|7[1-47]|88|9[0-49])|6(?:2[1-35]|5[149]|8[013467]))\\d{4}",
+          "(?:2(?:1[01]|31|[469]\\d|5[0-2]|7[5-7]|89)|3(?:[15-79]\\d|2[1-5]|45|8[0-5])|4(?:[38]0|42|51|[679]\\d)|5(?:[056][01]|1[23]|2[034]|[347-9]\\d)|6(?:0[01]|[258]\\d|[34]0|6[03]))\\d{4}",
       "exampleNumber": "2401234",
       "possibleLength": [7],
       "possibleLengthLocalOnly": [-1]
     },
     "mobile": {
-      "nationalNumberPattern": "(?:321|7(?:[1-8]\\d|9[03]))\\d{5}",
+      "nationalNumberPattern":
+          "7(?:[1-8]\\d{3}|9(?:(?:[03]\\d|2[0-7])\\d|1(?:0[13-9]|1[0-35-9]|2\\d|3[0-8])))\\d{3}",
       "exampleNumber": "71123456",
       "possibleLength": [8],
       "possibleLengthLocalOnly": [-1]
@@ -44,9 +44,7 @@ Map<String, Object?> getBW() {
       "possibleLengthLocalOnly": [-1]
     },
     "voip": {
-      "nationalNumberPattern": "79(?:1(?:[0-2]\\d|3[0-8])|2[0-7]\\d)\\d{3}",
-      "exampleNumber": "79101234",
-      "possibleLength": [8],
+      "possibleLength": [-1],
       "possibleLengthLocalOnly": [-1]
     },
     "id": "BW",
@@ -63,13 +61,13 @@ Map<String, Object?> getBW() {
       {
         "pattern": "(\\d{3})(\\d{4})",
         "format": "\$1 \$2",
-        "leadingDigitsPattern": ["[24-6]|3[15-9]"],
+        "leadingDigitsPattern": ["[2-6]"],
         "nationalPrefixOptionalWhenFormatting": false
       },
       {
         "pattern": "(\\d{2})(\\d{3})(\\d{3})",
         "format": "\$1 \$2 \$3",
-        "leadingDigitsPattern": ["[37]"],
+        "leadingDigitsPattern": ["7"],
         "nationalPrefixOptionalWhenFormatting": false
       },
       {
@@ -95,13 +93,13 @@ Map<String, Object?> getBW() {
       {
         "pattern": "(\\d{3})(\\d{4})",
         "format": "\$1 \$2",
-        "leadingDigitsPattern": ["[24-6]|3[15-9]"],
+        "leadingDigitsPattern": ["[2-6]"],
         "nationalPrefixOptionalWhenFormatting": false
       },
       {
         "pattern": "(\\d{2})(\\d{3})(\\d{3})",
         "format": "\$1 \$2 \$3",
-        "leadingDigitsPattern": ["[37]"],
+        "leadingDigitsPattern": ["7"],
         "nationalPrefixOptionalWhenFormatting": false
       },
       {

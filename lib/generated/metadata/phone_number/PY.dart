@@ -19,7 +19,8 @@ Map<String, Object?> getPY() {
       "possibleLengthLocalOnly": [5, 6]
     },
     "mobile": {
-      "nationalNumberPattern": "9(?:51|6[129]|7[1-6]|8[1-7]|9[1-5])\\d{6}",
+      "nationalNumberPattern":
+          "9881\\d{5}|9(?:51|6[129]|7[1-6]|8[1-7]|9[1-5])\\d{6}",
       "exampleNumber": "961456789",
       "possibleLength": [9],
       "possibleLengthLocalOnly": [-1]
@@ -102,7 +103,7 @@ Map<String, Object?> getPY() {
       {
         "pattern": "(\\d{3})(\\d{6})",
         "format": "\$1 \$2",
-        "leadingDigitsPattern": ["9(?:[5-79]|8[1-7])"],
+        "leadingDigitsPattern": ["9(?:[5-79]|8[1-8])"],
         "nationalPrefixFormattingRule": "0\$1",
         "nationalPrefixOptionalWhenFormatting": false
       },
@@ -162,7 +163,7 @@ Map<String, Object?> getPY() {
       {
         "pattern": "(\\d{3})(\\d{6})",
         "format": "\$1 \$2",
-        "leadingDigitsPattern": ["9(?:[5-79]|8[1-7])"],
+        "leadingDigitsPattern": ["9(?:[5-79]|8[1-8])"],
         "nationalPrefixFormattingRule": "0\$1",
         "nationalPrefixOptionalWhenFormatting": false
       },

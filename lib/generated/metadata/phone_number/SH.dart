@@ -6,7 +6,7 @@
 Map<String, Object?> getSH() {
   return {
     "generalDesc": {
-      "nationalNumberPattern": "(?:[256]\\d|8)\\d{3}",
+      "nationalNumberPattern": "(?:[2569]\\d|8)\\d{3}",
       "possibleLength": [4, 5]
     },
     "fixedLine": {
@@ -16,7 +16,7 @@ Map<String, Object?> getSH() {
       "possibleLengthLocalOnly": [-1]
     },
     "mobile": {
-      "nationalNumberPattern": "[56]\\d{4}",
+      "nationalNumberPattern": "[569]\\d{4}",
       "exampleNumber": "51234",
       "possibleLength": [5],
       "possibleLengthLocalOnly": [-1]
@@ -52,7 +52,7 @@ Map<String, Object?> getSH() {
       "possibleLengthLocalOnly": [-1]
     },
     "mainCountryForCode": true,
-    "leadingDigits": "[256]",
+    "leadingDigits": "[2569]",
     "noInternationalDialling": {
       "possibleLength": [-1],
       "possibleLengthLocalOnly": [-1]

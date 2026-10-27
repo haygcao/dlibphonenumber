@@ -11,14 +11,14 @@ Map<String, Object?> getGY() {
     },
     "fixedLine": {
       "nationalNumberPattern":
-          "(?:2(?:1[6-9]|2[0-35-9]|3[1-4]|5[3-9]|6\\d|7[0-79])|3(?:2[25-9]|3\\d)|4(?:4[0-24]|5[56])|50[0-6]|77[1-57])\\d{4}",
+          "(?:2(?:1[6-9]|2[0-35-9]|3[1-4]|5[3-9]|6\\d|7[0-79])|3(?:2[25-9]|3\\d)|4(?:4[0-24]|5[56])|5(?:0[0-6]|16)|77[1-57])\\d{4}",
       "exampleNumber": "2201234",
       "possibleLength": [7],
       "possibleLengthLocalOnly": [-1]
     },
     "mobile": {
       "nationalNumberPattern":
-          "(?:51[01]|6\\d\\d|7(?:[0-5]\\d|6[0-79]|70|8[067]))\\d{4}",
+          "(?:51[01]|6\\d\\d|7(?:[0-6]\\d|70|8[0167]))\\d{4}",
       "exampleNumber": "6091234",
       "possibleLength": [7],
       "possibleLengthLocalOnly": [-1]

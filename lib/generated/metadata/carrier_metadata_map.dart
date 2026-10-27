@@ -249,6 +249,7 @@ import 'carrier/996_en.dart';
 import 'carrier/998_en.dart';
 import 'carrier/93_fa.dart';
 import 'carrier/98_fa.dart';
+import 'carrier/7_kk.dart';
 import 'carrier/82_ko.dart';
 import 'carrier/374_ru.dart';
 import 'carrier/375_ru.dart';
@@ -268,7 +269,7 @@ class CarrierMetadataMap {
 
   static Map<int, List<String>> get config {
     return {
-      7: ["en", "ru"],
+      7: ["en", "ru", "kk"],
       20: ["en"],
       27: ["en"],
       30: ["en"],
@@ -739,6 +740,7 @@ class CarrierMetadataMap {
       '998_en': get998_en(),
       '93_fa': get93_fa(),
       '98_fa': get98_fa(),
+      '7_kk': get7_kk(),
       '82_ko': get82_ko(),
       '374_ru': get374_ru(),
       '375_ru': get375_ru(),

@@ -67,7 +67,7 @@ Map<String, Object?> getCO() {
     },
     "shortCode": {
       "nationalNumberPattern":
-          "1(?:06|1[2-9]|2[35-7]|3[27]|4[467]|5[36]|6[4-7]|95)|(?:29002|39003)9|40404|5930\\d\\d|85432|(?:[2359][57]|8(?:7|9\\d))\\d{3}",
+          "1(?:06|1[2-9]|2[35-7]|3[27]|4[467]|5[36]|6[4-7]|95)|(?:29002|39003)9|40404|5930\\d\\d|89\\d{4}|[23589][57]\\d{3}",
       "exampleNumber": "106",
       "possibleLength": [3, 5, 6],
       "possibleLengthLocalOnly": [-1]
@@ -77,16 +77,16 @@ Map<String, Object?> getCO() {
       "possibleLengthLocalOnly": [-1]
     },
     "carrierSpecific": {
-      "nationalNumberPattern": "(?:40|85)4\\d\\d",
+      "nationalNumberPattern": "404\\d\\d|8(?:[57]|9\\d)\\d{3}",
       "exampleNumber": "40400",
-      "possibleLength": [5],
+      "possibleLength": [5, 6],
       "possibleLengthLocalOnly": [-1]
     },
     "mobileNumberPortableRegion": false,
     "smsServices": {
-      "nationalNumberPattern": "(?:40|85)4\\d\\d",
+      "nationalNumberPattern": "404\\d\\d|8(?:[57]|9\\d)\\d{3}",
       "exampleNumber": "40400",
-      "possibleLength": [5],
+      "possibleLength": [5, 6],
       "possibleLengthLocalOnly": [-1]
     }
   };
